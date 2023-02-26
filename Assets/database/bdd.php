@@ -1,8 +1,8 @@
 <?php
-$dbhost = 'mysql-medev.alwaysdata.net';
-$dbname = 'medev_samaneek';
-$dbuser = 'medev';
-$dbpswd = 'Mouhamed002';
+$dbhost = '';
+$dbname = '';
+$dbuser = '';
+$dbpswd = '';
 try {
     session_start();
     $connect = new PDO(
