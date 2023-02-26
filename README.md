@@ -1,3 +1,7 @@
+# Description
+
+Samaneek est un site responsive  permettant la gestion de Chambre étudiant d'une école 
+
 # Notre groupe
 
 - Mouhamed Diouf
@@ -5,6 +9,8 @@
 - Abdou Salam Niang
 - Mouhamed Mbaye
 - Oulimata Thiam
+
+
 
 # Notre Figma
 
