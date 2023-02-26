@@ -25,9 +25,7 @@ if (isset($_POST['valider'])){
                 $_SESSION['emailAd'] = $userinfo['emailEtudiant'];
                 $_SESSION['classe'] = $userinfo['Classe'];
                 $_SESSION['DemandeChambre'] = $userinfo['DemandeChambre'];
-
                 header("Location: ./Assets/Views/Etudiants/homeEtudiant.php");
-
             } else {
                 $e = "Mots de passe incorrect";
             }
@@ -44,7 +42,6 @@ if (isset($_POST['valider'])){
                     $_SESSION['mdpAd'] = $admininfo['mdp'];
                     $_SESSION['emailAd'] = $admininfo['emailAdmin'];
                     header("Location: ./Assets/Views/Admin/homeAdmin.php");
-
                 } else {
                     $e = "Cette email n'est pas inscrit dans le site";
                 }
@@ -54,4 +51,3 @@ if (isset($_POST['valider'])){
         $e = "Remplit tous les champs";
     }
 }
-?>

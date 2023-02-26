@@ -18,21 +18,27 @@ require_once('../../Actions/logOut.php');
 
 <body>
     <div class="navbar">
+
         <a href="./homeAdmin.php"><img src="../../img/logo.png" alt="" height="48px"
                 style="margin-left:15px;margin-top:2px;"></a>
         <div class="menu">
-            <a href="./ProfilAdmin.php"> <span id="profil"> <img class="icone" src="../../img/profil.png" alt="">
+            <span id="menu"><img class="icone" src="../../img/menu.png" alt="">
+                <p>Menu</p>
+            </span>
+            <a href="./profilAdmin.php"> <span id="profil"> <img class="icone" src="../../img/profil.png" alt="">
                     <p><?php echo $_SESSION['nomAd'] ?></p>
                 </span></a>
             <div class="sep"></div>
             <a href="./homeAdmin.php"><span id="home"><img class="icone" src="../../img/home.png" alt="">
-                    <p>home</p>
+                    <p>Home</p>
                 </span></a>
             <div class="sep"></div>
             <span id="parametre"><img class="icone" src="../../img/parametre.png" alt="">
                 <p>Parametre</p>
             </span>
+
         </div>
+
     </div>
     <div class="Ajouter">
         <h2 style="position: absolute; left: 50%; transform: translate(-50%);top:10px">Ajouter une Chambre </h2>
@@ -45,7 +51,8 @@ require_once('../../Actions/logOut.php');
                     required>
                 <div
                     style="display:flex;align-items: center;justify-content: space-between; width: 270px;margin-top: 20px;">
-                    <button type="submit" name="Ajouter" class="addbtn2">Ajouter</button>
+                    <button type="submit" name="Ajouter" class="addbtn2"
+                        onclick="return confirm('Êtes-vous sûr de vouloir Ajouter cette  Chambre ?')">Ajouter</button>
                     <a href="./ListeChambre.php">
                         <div id="annulera">Annuler</div>
                     </a>
@@ -56,13 +63,28 @@ require_once('../../Actions/logOut.php');
 
 
     </div>
-    <p class="erreur"> <?php if(isset($e)){echo$e;}?></p>
+    <p class="erreur"> <?php if (isset($e)) {
+                            echo $e;
+                        } ?></p>
     </div>
 
     </div>
     </div>
+    <div class="hide">
+        <div id="hidediv">Merci d'aller sur ordinateur pour voir la liste détailler</div>
+    </div>
     <div class="blury">
+
         <div id="menuparametre">
+            <a href="./profilAdmin.php"> <span id="profilb"> <img class="icone" src="../../img/profil.png" alt="">
+                    <p><?php echo $_SESSION['nomAd'] ?></p>
+                </span></a>
+            <a href="./homeAdmin.php"><span id="homeb"><img class="icone" src="../../img/home.png" alt="">
+                    <p>Home</p>
+                </span></a>
+            <a href="./AddAdmin.php"><span id="AddA"><img class="icone" src="../../img/addAdmin.png" alt="">
+                    <p>Ajouter Admin</p>
+                </span></a>
             <form action="" method="post">
                 <button name="deconnexion" id="deconnexion"
                     onclick="return confirm('Êtes-vous sûr de vouloir vous  deconnecter ?')"> <img

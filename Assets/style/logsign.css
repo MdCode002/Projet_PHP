@@ -6,6 +6,7 @@ body{
     background-image: url(../img/bigback.png);
     background-repeat:no-repeat;
     background-size: cover;
+    background-color: #fae1a9;
 }
 .Menu{
     width: 100%;
@@ -17,6 +18,7 @@ body{
     width: 55%;
     height: 80%;
     position: absolute;
+    min-width: 600px;
     /* background: red; */
 }
 #slogan{
@@ -28,6 +30,7 @@ body{
     font-size: 2vw;
     line-height: 42px;
     color: #E4C388;
+    width: fit-content;
 }
 #txtg{
     font-weight: 900;
@@ -35,6 +38,7 @@ body{
     color: #FFFFFF;
     text-shadow: 0px 6px 6px rgba(0, 0, 0, 0.50);
     line-height: 62px;
+    margin-right: 25px;
 }
 #connexion{
     color: #FFFFFF;
@@ -42,6 +46,7 @@ body{
     position: relative;
     top: 18%;
     left: 6%;
+    width: fit-content;
     font-size: 2.3vw;
 }
 #inscription{
@@ -51,6 +56,7 @@ body{
     top: 10%;
     left: 6%;
     font-size: 2.3vw;
+    width: fit-content;
 }
 .formsign{
     top: 31%;
@@ -69,6 +75,7 @@ body{
     flex-direction: column; 
     /* background: red; */
     width: 40%;
+    /* min-width: 300px; */
 }
 input[type="text"],input[type="password"],input[type="email"],input[type="number"]{
     width: 100%;
@@ -116,7 +123,6 @@ input[type="text"],input[type="password"],input[type="email"],input[type="number
     font-family: 'Inter';
     font-style: normal;
     font-size: 16px;
-    min-width: 340px; ;
     color: rgba(0, 0, 0, 0.76);
 }
 #btn:hover{
@@ -142,4 +148,57 @@ text-decoration: none;
     height: 100px;
     background-color: #FAE3A7;
     
+}
+@media (max-width: 848px){
+    body{
+        background-image: url(../img/bigbackMobile.png);
+    }
+    #slogan{
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        top: -10px;
+
+    }
+    #txtg{
+        font-size: 25px;
+    }
+    #btn{
+        width: 80%; 
+        font-size: 15px;
+    }
+    #connexion{
+        font-size: 25px;
+    }
+    #inscription{
+        top: 0px;
+        font-size: 25px;
+    }
+}
+@media (max-width: 600px){
+    #log{
+        width: 60%;
+        min-width: 0;
+    }
+    .form{
+        width: 100%;
+    }
+    .formsign{
+        width: 100%;
+    }
+   
+    body{
+        background-image: url(../img/bigbackMobilesmall.png);
+    }
+}
+@media (max-width: 375px){
+    body{
+        background-image: url(../img/bigbackMobilesmaller.png);
+    }
+    .formsign{
+        width: 100%;
+    }
+    #log{
+        width: 7 0%;
+    }
 }

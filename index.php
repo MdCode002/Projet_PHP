@@ -16,18 +16,21 @@
         <img src="./Assets/img/logo.png" alt="" height="48px" style="margin-left:15px;margin-top:2px">
     </div>
     <div id="log">
-        <pre id="slogan"><span id="txtg">SAMA NEEK</span>      KOU NEK AK SA NEEK</pre>
+        <pre id="slogan"><span id="txtg">SAMA NEEK</span>KOU NEK AK SA NEEK</pre>
         <p id="connexion">Connexion</p>
         <form action="" method="post">
             <div class="form">
                 <input type="text" placeholder="Email" name="email" required>
                 <input type="password" placeholder="Mots de passe" name="mdp" required>
-                <p class="erreur"> <?php if(isset($e)){echo$e;}?></p>
+                <p class="erreur"> <?php if (isset($e)) {
+                                        echo $e;
+                                    } ?></p>
 
-                <button id="btn" type="submit" name="valider"> Se connecte</button>
-                <p id="sinscrire"><span>Vous n’avais pas de compte?<a href="./Signup.php"> <span
+                <button id="btn" type="submit" name="valider"> Se connecter</button>
+                <p id="sinscrire"><span>Vous n’avais pas de compte?
+                        <a href="./Signup.php"> <span
                                 style="text-decoration-line: underline;color: black;font-weight: 900;cursor: pointer;">
-                                S’inscrire</span></a></span></p>
+                                <br> S’inscrire</span></a></span></p>
             </div>
         </form>
 

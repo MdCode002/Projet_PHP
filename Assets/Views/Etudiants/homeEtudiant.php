@@ -23,6 +23,9 @@ require_once('../../Actions/logOut.php');
         <a href="./homeEtudiant.php"><img src="../../img/logo.png" alt="" height="48px"
                 style="margin-left:15px;margin-top:2px;"></a>
         <div class="menu">
+            <span id="menu"><img class="icone" src="../../img/menu.png" alt="">
+                <p>Menu</p>
+            </span>
             <a href="./ProfilEtudiant.php"> <span id="profil"> <img class="icone" src="../../img/profil.png" alt="">
                     <p><?php echo $_SESSION['nomEt'] ?></p>
                 </span></a>
@@ -34,7 +37,9 @@ require_once('../../Actions/logOut.php');
             <span id="parametre"><img class="icone" src="../../img/parametre.png" alt="">
                 <p>Parametre</p>
             </span>
+
         </div>
+
     </div>
     </div>
     <div class="continerListeEtudiant">
@@ -43,34 +48,35 @@ require_once('../../Actions/logOut.php');
             <div id="Liste"
                 style="flex-direction : column;align-items: center; font-family: 'Lato',sans-serif; top: 50px;">
                 <h4 style="margin:10px"><span id="infogray">Nom de votre chambre </span> :
-                    <?php echo $chambre['nomChambre'];?></h4>
+                    <?php echo $chambre['nomChambre']; ?></h4>
                 <h4 style="margin:10px"><span id="infogray"> Etage de la chambre</span> :
-                    <?php echo $chambre['etageChambre'];?> </h4>
+                    <?php echo $chambre['etageChambre']; ?> </h4>
                 <h4 style="margin:10px"><span id="infogray">Superficie de votre Chambre </span>:
-                    <?php echo $chambre['Superficie'];?> m² </h4>
+                    <?php echo $chambre['Superficie']; ?> m² </h4>
                 <h4 style="margin:10px"><span id="infogray"> nombre de locataire </span> :
-                    <?php echo $chambre['effectif'];?>/<?php echo $chambre['effectifMax'];?> </h4>
+                    <?php echo $chambre['effectif']; ?>/<?php echo $chambre['effectifMax']; ?> </h4>
                 <h4 style="margin:10px"> <span id="infogray">Vos colocataire </span> : </h4>
                 <div id="coloc">
                     <div id="Lesprenom">
                         <div style="margin: 10px;">Prenoms Noms</div>
                         <br>
-                        <?php foreach ($coloc as $etudiant){ ?>
-                        <div id="ListeName" style="background: white;"><?php echo $etudiant['NomEtudiant'];?></div>
-                        <?php }?>
+                        <?php foreach ($coloc as $etudiant) { ?>
+                        <div id="ListeName" style="background: white;"><?php echo $etudiant['NomEtudiant']; ?></div>
+                        <?php } ?>
                     </div>
                     <div id="Lesprenom">
                         <div style="margin: 10px;">Telephone</div>
                         <br>
-                        <?php foreach ($coloc as $etudiant){ ?>
-                        <div id="ListeName" style="background: white;"><?php echo $etudiant['TelEtudiant'];?></div>
-                        <?php }?>
+                        <?php foreach ($coloc as $etudiant) { ?>
+                        <div id="ListeName" style="background: white;"><?php echo $etudiant['TelEtudiant']; ?></div>
+                        <?php } ?>
                     </div>
                     <div id="Lesprenom">
                         <div style="margin: 10px;">Classe</div>
                         <br>
-                        <?php foreach ($coloc as $etudiant){ ?>
-                        <div id="ListeName" style="background: white;"><?php echo $etudiant['Classe'];?></div><?php }?>
+                        <?php foreach ($coloc as $etudiant) { ?>
+                        <div id="ListeName" style="background: white;"><?php echo $etudiant['Classe']; ?></div>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
@@ -78,7 +84,14 @@ require_once('../../Actions/logOut.php');
     </div>
     </div>
     <div class="blury">
+
         <div id="menuparametre">
+            <a href="./ProfilEtudiant.php"> <span id="profilb"> <img class="icone" src="../../img/profil.png" alt="">
+                    <p><?php echo $_SESSION['nomEt'] ?></p>
+                </span></a>
+            <a href="./homeEtudiant.php"><span id="homeb"><img class="icone" src="../../img/lit-double 1.png" alt="">
+                    <p>Chambre</p>
+                </span></a>
             <form action="" method="post">
                 <button name="deconnexion" id="deconnexion"
                     onclick="return confirm('Êtes-vous sûr de vouloir vous  deconnecter ?')"> <img

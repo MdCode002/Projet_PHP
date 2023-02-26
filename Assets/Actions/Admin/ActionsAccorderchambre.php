@@ -17,11 +17,12 @@ if (isset($_SESSION['accetudiant'])){
 }
 else{
      header("Location: ./ListeDemande.php");}
-          if (isset($_POST['accorder'])){
-        $selectchambre = $_SESSION['selectchambre'];
-         $connect->query("UPDATE etudiant SET DemandeChambre = 'valider' WHERE IdEtudiant  = " .$etudiantChambre[0]);
-         $connect->query("UPDATE etudiant SET Chambre = $selectchambre[0] WHERE IdEtudiant = $etudiantChambre[0]"); 
-        $Neweffectif = $selectchambre[5]+1;
-         $connect->query("UPDATE chambre SET effectif = $Neweffectif WHERE idChambre  = ".$selectchambre[0]);
-         header("Location: ./ListeDemande.php");
-     }
+     
+if (isset($_POST['accorder'])){
+$selectchambre = $_SESSION['selectchambre'];
+$connect->query("UPDATE etudiant SET DemandeChambre = 'valider' WHERE IdEtudiant  = " .$etudiantChambre[0]);
+$connect->query("UPDATE etudiant SET Chambre = $selectchambre[0] WHERE IdEtudiant = $etudiantChambre[0]"); 
+$Neweffectif = $selectchambre[5]+1;
+$connect->query("UPDATE chambre SET effectif = $Neweffectif WHERE idChambre  = ".$selectchambre[0]);
+header("Location: ./ListeDemande.php");
+}

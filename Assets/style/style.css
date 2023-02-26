@@ -58,7 +58,7 @@ body{
     position: absolute;
     width: 80%;
     height: 179px;
-    left: 30px;
+    left: 5px;
     top: 110px;
     background: rgba(217, 217, 217, 0.01);
     box-shadow: inset -6px -6px 12px rgba(0, 0, 0, 0.35), inset 6px 6px 12px rgba(0, 0, 0, 0.35);
@@ -218,11 +218,23 @@ align-items: flex-start;
     justify-content: flex-start;
     margin: 5px;
 }
-#parametre,#home,#profil{
+#parametre,#home,#profil,#AddA{
     display: flex;
      align-items: center;
      cursor: pointer;
 }
+#AddA{
+    display: flex;
+     align-items: center;
+     cursor: pointer;
+     margin: 20px; 
+}
+#homeb,#profilb,#menu{
+    display: none;
+     align-items: center;
+     cursor: pointer;
+}
+
 img{
     margin: 3px;
 }
@@ -272,9 +284,11 @@ justify-content: space-evenly;
 align-items: flex-start;
 padding-top: 20px;
 padding-bottom: 20px;
+/* font-size: 15px; */
 }
 .Ajouter{
     width: 50%;
+    min-width: 310px;
     height: auto;
     background: #e2e1e1;
     position: relative;
@@ -320,7 +334,17 @@ border-radius: 10px;
 #filtre{
     width: 170px;
     position: absolute;
-    left: 50%;
+    left: 61%;
+    top: 50px;
+    transform: translate(-50%);
+    border-radius: 20px;
+    padding-left: 5px;
+}
+#Searchchambre{
+    width: 160px;
+    position: absolute;
+    border: 1px solid #767676;
+    left: 39%;
     top: 50px;
     transform: translate(-50%);
     border-radius: 20px;
@@ -363,6 +387,8 @@ border-radius: 10px;
     height: 30px;
     font-size: medium;
     border-radius:20px ;
+    color: black;
+    background: #f0f0f0;
 }
 #chambreselect{
     position: absolute;
@@ -383,9 +409,9 @@ border-radius: 10px;
     justify-content: center;
     font-family: 'Inter';
     font-style: normal;
-    font-size: medium;
     background: #e9e8e8;
     border-radius: 10px;
+
     border: 1px solid black;
     box-shadow: 0px -8px 17px rgba(0, 0, 0, 0.1), -4px 4px 17px rgba(0, 0, 0, 0.1), 12px 4px 17px rgba(0, 0, 0, 0.1);
 
@@ -420,4 +446,197 @@ border-radius: 10px;
     border: solid 2px black;
     font-size: small;
 
+}
+@media (max-width: 587px){
+    #parametre,#home,#profil,#menu,.sep{
+        display: none;
+    }
+    #containdemande{
+        width: 90%;
+    }
+    #menu{
+        display: flex;   
+    }
+    #homeb,#profilb{
+        display: flex;
+        margin: 20px;
+    }
+    .navbar{
+        justify-content: space-between;
+    }
+    .menu{
+        width: fit-content;
+    }
+}
+@media (max-width: 405px){
+    #Liste{
+        font-size: 13px
+    }
+}
+@media (max-width: 1212px){
+    #listeEte{
+        left: 10px;
+    }
+    #listeMess{
+        right: 10px;
+    }
+    #containroom{
+        min-width: 700px;
+    }
+    
+    #Listeroom{
+        width: 120px;
+    }
+}
+@media (max-width: 1038px){
+    #listeEte{
+        left: 10px;
+        width: 450px;
+    }
+    #listeMess{
+        right: 10px;
+        width: 450px;
+    }
+    #containroom{
+        min-width: 500px;
+        height: 150px;
+        width: 75%;
+    }
+    
+    #Listeroom{
+        width: 120px;
+    }
+}
+@media (max-width: 926px){
+    .room{
+      margin: 10px;  
+    }
+    #listeEte{
+        left: 50%;
+        transform: translate(-50%);
+        bottom: -270px;
+        width: 450px;
+    }
+    #listeMess{
+        left: 50%;
+        transform: translate(-50%);
+        width: 450px;
+    }
+    #containroom{
+        min-width: 320px;
+        height: 145px;
+        width: 75%;
+        font-size: 5px;
+    }
+    
+   
+}
+@media (max-width: 670px){
+    #containroom{
+        min-width: 320px;
+        height: 145px;
+        width: 75%;
+        font-size: 5px;
+        right: 110px;
+        left: auto;
+    }
+    #Listeroom{
+        width: 100px;
+        height: 100px;
+        position: absolute;
+       right: 5px;
+    }
+    
+
+}
+@media (max-width: 556px){
+    #containroom{
+      display: none;
+    }
+    #Listeroom{
+        left: 50%;
+        transform: translate(-50%);
+        position: absolute;
+    }
+    #listeEte{
+        bottom: auto;
+        top: 270px;
+    }
+    #listeMess{
+        bottom: auto;
+        top: 570px;
+    }
+
+}
+@media (max-width: 468px){
+    #listeEte{
+        width: 400px;
+    }
+    #listeMess{
+        width: 400px;
+    }
+    #containroom{
+        min-width: 150px;
+        height: 70px;
+    }
+    
+    
+
+}
+@media (max-width: 413px){
+    #listeEte{
+        width: 380px;
+    }
+    #listeMess{
+        width: 380px;
+    }
+}
+@media (max-width: 396px){
+    #listeEte{
+        width: 350px;
+    }
+    #listeMess{
+        width: 350px;
+    }
+}
+@media (max-width: 355px){
+    #listeEte{
+        width: 340px;
+    }
+    #listeMess{
+        width: 340px;
+    }
+}
+.hide{
+    position: absolute;
+    top: 62px;
+    width: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    backdrop-filter: blur(40px) contrast(40%);
+    -webkit-backdrop-filter: blur(10px) contrast(70%);
+    overflow: hidden;
+}
+#hidediv{
+    width:  350px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ddd9d9;
+    border: solid 1px black;
+    text-align: center;
+}
+@media (max-width: 850px){
+
+    .hide{
+        display: flex;
+    }
+}
+button{
+    color: black;
+    background: #f0f0f0;
+    border: solid 2px black;
 }
