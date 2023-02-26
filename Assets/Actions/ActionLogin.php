@@ -1,12 +1,12 @@
 <?php
 require('./Assets/database/bdd.php');
-if (isset($_SESSION['authA'])){
+if (isset($_SESSION['authA'])) {
     header('Location: ./Assets/Views/Admin/homeAdmin.php');
 };
-if (isset($_SESSION['authE'])){
+if (isset($_SESSION['authE'])) {
     header('Location: ./Assets/Views/Etudiants/homeEtudiant.php');
 };
-if (isset($_POST['valider'])){
+if (isset($_POST['valider'])) {
     if (isset($_POST['email']) && isset($_POST['mdp'])) {
         $Email = htmlspecialchars($_POST['email']);
         $mdp = htmlspecialchars($_POST['mdp']);
@@ -15,7 +15,7 @@ if (isset($_POST['valider'])){
 
         if ($emailExist->rowCount() > 0) {
             $userinfo = $emailExist->fetch();
-            
+
             if (password_verify($mdp, $userinfo['mdp'])) {
                 $_SESSION['authE'] = true;
                 $_SESSION['IdEt'] = $userinfo['IdEtudiant'];
@@ -43,11 +43,13 @@ if (isset($_POST['valider'])){
                     $_SESSION['emailAd'] = $admininfo['emailAdmin'];
                     header("Location: ./Assets/Views/Admin/homeAdmin.php");
                 } else {
-                    $e = "Cette email n'est pas inscrit dans le site";
+                    $e = "Mots de passe incorrect";
                 }
+            } else {
+                $e = "Cette email n'est pas inscrit dans le site";
             }
         }
-    }else{
+    } else {
         $e = "Remplit tous les champs";
     }
 }
